@@ -1,0 +1,1 @@
+web: gunicorn the_science_of_the_kitchen.wsgi
