@@ -13,7 +13,7 @@ class Category(models.Model):
         return self.name
 
 
-class Post(models.Model):
+class Article(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     excerpt = models.TextField(blank=True)
@@ -21,7 +21,7 @@ class Post(models.Model):
         Category, on_delete=models.PROTECT, related_name="posts"
     )
     author = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="blog_posts"
+        User, on_delete=models.CASCADE, related_name="article_posts"
         )
     featured_image = CloudinaryField('image', blank=True)
     content = models.TextField()
@@ -34,7 +34,7 @@ class Post(models.Model):
 
 class Comment(models.Model):
     post = models.ForeignKey(
-        Post, on_delete=models.CASCADE, related_name="comments"
+        Article, on_delete=models.CASCADE, related_name="comments"
     )
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="comments"
