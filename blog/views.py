@@ -1,5 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.views import generic
+from .models import Article
 
-def index(request):
-    return HttpResponse("Welcome to the blog")
+
+class ArticleList(generic.ListView):
+    queryset = Article.objects.all()
+    template = "article_list.html"
