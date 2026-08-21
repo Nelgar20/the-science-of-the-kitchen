@@ -6,3 +6,4 @@ from .models import Article
 class ArticleList(generic.ListView):
     queryset = Article.objects.all()
     template = "article_list.html"
+    paginate_by = 6
