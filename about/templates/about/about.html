@@ -3,22 +3,22 @@
 {% load static %}
 
 <!-- About us child template -->
- <div class="container">
+ <div class="container about-card">
     <div class="row">
         <!-- About us image -->
          <div class="col-4">
-            <img src="{% static 'images/chef-about-04.webp' %}" alt="picture of a chef">
-         </div class="col-8">
+            <img class="img-fluid rounded" src="{% static 'images/chef-about-04.webp' %}" alt="picture of a chef">
+         </div>
          <!-- About us content -->
-          <div>
-            <h2></h2>
-            <p></p>
+          <div class="col-8">
+            <h2>{{ about.title }}</h2>
+            <p>{{ about.content | safe }}</p>
           </div>
     </div>
     <!-- Updated on field -->
     <div class="row">
-        <div>
-            <p></p>
+        <div class="col text-right">
+            <p>Last update: {{ about.updated_on }}</p>
         </div>
     </div>
  </div>
