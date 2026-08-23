@@ -4,7 +4,7 @@ from .models import Article
 
 
 class ArticleList(generic.ListView):
-    queryset = Article.objects.all()
+    queryset = Article.objects.filter(status=1)
     template = "article_list.html"
     paginate_by = 6
 
