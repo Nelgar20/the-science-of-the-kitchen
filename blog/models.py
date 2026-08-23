@@ -33,7 +33,7 @@ class Article(models.Model):
 
 
 class Comment(models.Model):
-    post = models.ForeignKey(
+    article = models.ForeignKey(
         Article, on_delete=models.CASCADE, related_name="comments"
     )
     author = models.ForeignKey(
