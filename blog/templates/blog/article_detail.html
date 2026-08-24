@@ -47,6 +47,9 @@
                         This comment is awaiting approval
                     </p>
                     {% endif %}
+                    {% if user.is_authenticated and comment.author == user %}
+                    <button class="btn btn-success" comment_id="{{ comment.id }}">Edit</button>
+                    {% endif %}
                 </div>
                 {% endfor %}
             </div>
@@ -70,3 +73,7 @@
     </div>
 </div>
 {% endblock content %}
+
+{% block edit/del %}
+<script src="{% static 'js/comments.js' %}"></script>
+{% endblock %}

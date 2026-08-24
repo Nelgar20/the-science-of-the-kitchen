@@ -4,4 +4,4 @@ from .models import WorkWithUs
 class WorkWithUsForm(forms.ModelForm):
     class Meta:
         model = WorkWithUs
-        fields = ('name', 'email', 'message') 
+        fields = ('name', 'email', 'message')
