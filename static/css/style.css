@@ -56,3 +56,15 @@ h1 {
   color: #b02a37;
   font-weight: 600;
 }
+
+.delete-btn {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.edit-btn {
+    color: #fff;
+    background-color: #198754;
+    border-color: #198754;
+}
