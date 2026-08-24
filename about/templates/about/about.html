@@ -1,19 +1,20 @@
 {% extends 'base.html' %}
-{% block content %}
 {% load static %}
+{% load crispy_forms_tags %}
 
+{% block content %}
 <!-- About us child template -->
- <div class="container about-card">
+<div class="container about-card">
     <div class="row">
         <!-- About us image -->
-         <div class="col-4">
+        <div class="col-4">
             <img class="img-fluid rounded" src="{% static 'images/chef-about-04.webp' %}" alt="picture of a chef">
-         </div>
-         <!-- About us content -->
-          <div class="col-8">
+        </div>
+        <!-- About us content -->
+        <div class="col-8">
             <h2>{{ about.title }}</h2>
             <p>{{ about.content | safe }}</p>
-          </div>
+        </div>
     </div>
     <!-- Updated on field -->
     <div class="row">
@@ -21,5 +22,18 @@
             <p>Last update: {{ about.updated_on }}</p>
         </div>
     </div>
- </div>
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-6 my-5">
+            <h2>Work with us!</h2>
+            <p>Have an idea for a collaboration? We would love to hear from you. Whether you are a chef, food writer,
+                photographer, educator, creator, or food enthusiast, tell us about your idea and how we could create
+                something meaningful together.</p>
+            <form method="post">
+                {{ work_with_us_form | crispy }}
+                {% csrf_token %}
+                <button class="btn btn-secondary btn-dark" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock content %}
