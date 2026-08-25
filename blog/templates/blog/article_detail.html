@@ -6,12 +6,12 @@
 
 <div class="container">
     <div class="row">
-        <div class="card col-12">
-            <h1>{{article.title}}</h1>
-            <p>{{article.author}} | {{article.created_on}}</p>
+        <div class="card col-12 border-0">
+            <h1 class="text-center">{{article.title}}</h1>
             <div class="card-body">
                 <p>{{ article.content | safe }}</p>
             </div>
+            <p>{{article.author}} | {{article.created_on}}</p>  
         </div>
     </div>
     <!-- Display number of comments -->
@@ -25,7 +25,7 @@
     </div>
     <!-- Display comments -->
     <div class="row">
-        <div class="col-md-8 card mb-3  mt-2 ">
+        <div class="col-md-8 card mb-3 mt-2 border-0">
             <div class="card-body">
                 <h3>Comments:</h3>
                 <!-- For loop to iterate comments -->
@@ -56,7 +56,7 @@
             </div>
         </div>
         <!-- Comment form -->
-        <div class="col-md-4 card mb-3 mt-2">
+        <div class="col-md-4 card mb-3 mt-2 border-0">
             <div class="card-body">
                 {% if user.is_authenticated %}
                 <h3>Leave a comment:</h3>
@@ -64,7 +64,7 @@
                 <form id="commentForm" method="post" style="margin-top: 1em;">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
-                    <button id="submitButton" type="submit" class="btn btn-dark btn-lg">Submit</button>
+                    <button id="submitButton" type="submit" class="btn submit-btn btn-lg">Submit</button>
                 </form>
                 {% else %}
                 <p>Log in to leave a comment</p>
