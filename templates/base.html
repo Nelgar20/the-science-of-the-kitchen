@@ -49,9 +49,9 @@
                             Categories
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Food Chemistry</a></li>
-                            <li><a class="dropdown-item" href="#">Food Safety</a></li>
-                            <li><a class="dropdown-item" href="#">Heat and Energy</a></li>
+                            <li><a class="dropdown-item" href="{% url 'blog' %}?category=food-chemistry">Food Chemistry</a></li>
+                            <li><a class="dropdown-item" href="{% url 'blog' %}?category=food-safety">Food Safety</a></li>
+                            <li><a class="dropdown-item" href="{% url 'blog' %}?category=heat-and-energy">Heat and Energy</a></li>
                         </ul>
                     </li>
                     {% if user.is_authenticated %}

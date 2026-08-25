@@ -9,19 +9,25 @@ from .forms import CommentForm
 
 class ArticleList(generic.ListView):
     queryset = Article.objects.filter(status=1)
-    template = "article_list.html"
+    template_name = "article_list.html"
     paginate_by = 6
     
     def get_queryset(self):
-        queryset = Article.objects.all()
+        
+        queryset = Article.objects.filter(status=1).select_related("category")
         search = self.request.GET.get("search")
+        category = self.request.GET.get("category")
+        
         if search:
             queryset = queryset.filter(
                 Q(title__icontains=search) |
                 Q(excerpt__icontains=search) |
                 Q(content__icontains=search)
             )
-        return queryset
+        if category:
+            queryset = queryset.filter(category__slug=category)
+            
+        return queryset.order_by("-created_on")
 
 
 def article_detail(request, slug):
