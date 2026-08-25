@@ -17,6 +17,13 @@ h1 {
   padding: 3em;
 }
 
+/* Navbar */
+.navbar .form-control:focus {
+    border-color: #ffffff;
+    box-shadow: 0 0 0 0.25rem rgb(255 255 255 / 25%);
+    outline: none;
+}
+
 /* Footer section */
 footer a {
   color: #9ea1a5;
@@ -135,3 +142,14 @@ a:focus {
     border-color: #000;
 }
 
+.src-btn {
+    color: #9ea1a5;
+    background-color: #2b3035;
+    border-color: #9ea1a5;
+}
+
+.src-btn:hover {
+    color: #fff;
+    background-color: #2b3035;
+    border-color: #fff;
+}

@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
+from django.db.models import Q
 from .models import Article, Comment
 from .forms import CommentForm
 
@@ -10,6 +11,17 @@ class ArticleList(generic.ListView):
     queryset = Article.objects.filter(status=1)
     template = "article_list.html"
     paginate_by = 6
+    
+    def get_queryset(self):
+        queryset = Article.objects.all()
+        search = self.request.GET.get("search")
+        if search:
+            queryset = queryset.filter(
+                Q(title__icontains=search) |
+                Q(excerpt__icontains=search) |
+                Q(content__icontains=search)
+            )
+        return queryset
 
 
 def article_detail(request, slug):
