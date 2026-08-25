@@ -13,10 +13,6 @@ footer {
   background-color:#000;
 }
 
-h1 {
-  padding: 3em;
-}
-
 /* Navbar */
 .navbar .form-control:focus {
     border-color: #ffffff;
@@ -50,6 +46,11 @@ a:focus {
 }
 
 /* Blog */
+/* Header */
+.header-pad {
+  padding: 3em;
+}
+
 /* Articles section */
 .article-container {
     min-height: 450px;
