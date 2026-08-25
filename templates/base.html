@@ -28,7 +28,8 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" data-bs-theme="dark">
         <div class="container">
-            <a class="navbar-brand" href="{% url 'home' %}">The science of the kitchen</a>
+            <a class="navbar-brand" 
+            href="{% url 'home' %}">The science of the kitchen</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -36,10 +37,12 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'blog' %}">Blog</a>
+                        <a class="nav-link {% if request.path == blog_url %}active" aria-current="page{% endif %}" 
+                        href="{% url 'blog' %}">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'about' %}">About Us</a>
+                        <a class="nav-link {% if request.path == about_url %}active" aria-current="page{% endif %}" 
+                        href="{% url 'about' %}">About Us</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -95,9 +98,9 @@
         {% endblock content %}
     </main>
     <!-- Footer -->
-    <footer class="">
+    <footer class="txt-white">
         <div>
-            <a class="text-large contact" href="">Contact Us</a>
+            <a class="text-large" href="{% url 'about' %}">Contact Us</a>
             <span>
                 <p>or</p>
             </span>
