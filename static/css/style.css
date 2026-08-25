@@ -24,6 +24,13 @@ h1 {
     outline: none;
 }
 
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus,
+.navbar .dropdown-item:active {
+    color: #ffffff;
+    background-color: #343a40;
+}
+
 /* Footer section */
 footer a {
   color: #9ea1a5;
