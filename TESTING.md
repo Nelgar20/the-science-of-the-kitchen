@@ -49,6 +49,8 @@ Eliminated the redundant css style, the other two warnings refer to the root cla
 
 
 ## JavaScript validation
+![image](static/images/jshint-validation.png)
+
 ## Python validation
 ## Lighthouse validation
 # Manual testing
