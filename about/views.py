@@ -13,9 +13,10 @@ def about_us(request):
         if work_with_us_form.is_valid():
             work_with_us_form.save()
             messages.add_message(
-                request, messages.SUCCESS, 
-                "The request to work with us received! We'll be in touch within 2 working days.")
-    
+                request, messages.SUCCESS,
+                "The request to work with us received!"
+                "We'll be in touch within 2 working days.")
+
     about = About.objects.all().order_by('-updated_on').first()
     work_with_us_form = WorkWithUsForm()
 
@@ -26,4 +27,3 @@ def about_us(request):
          "work_with_us_form": work_with_us_form
          },
     )
-
