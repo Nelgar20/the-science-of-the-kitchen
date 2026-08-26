@@ -1,11 +1,10 @@
 :root {
-  --cream: #fff4de;
   --heading-font: "Playfair Display", serif;
   --body-font: "Source Sans 3", sans-serif;
 }
 
 body {
-  background-color: var();
+  background-color: #ffffff;
   font-family: var(--body-font);
 }
 
