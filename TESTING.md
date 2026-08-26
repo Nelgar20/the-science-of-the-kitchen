@@ -39,9 +39,15 @@ Errors fixed
 Pass
 ![image](static/images/logout-validation-pass.png)
 
-
-
 ## CSS validation
+Passed with 4 warnings
+![image](static/images/css-validation-pass-1.png)
+![image](static/images/css-validation-warnings-4.png)
+Eliminated the redundant css style, the other two warnings refer to the root class.
+![image](static/images/css-validation-pass-2.png)
+![image](static/images/css-validation-warnings-2.png)
+
+
 ## JavaScript validation
 ## Python validation
 ## Lighthouse validation
