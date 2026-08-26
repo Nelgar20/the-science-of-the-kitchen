@@ -9,7 +9,7 @@
         <div class="card col-12 border-0">
             <h1 class=" p-5 text-center">{{article.title}}</h1>
             <div class="pt-5 card-body">
-                <p>{{ article.content | safe }}</p>
+                <div>{{ article.content | safe }}</div>
             </div>
             <p>{{article.author}} | {{article.created_on}}</p>  
         </div>
@@ -74,13 +74,13 @@
     </div>
 </div>
 <!-- Delete confirmation modal -->
-<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="deleteModalLabel">
+                <h4 class="modal-title" id="deleteModalLabel">
                     Delete comment?
-                </h5>
+                </h4>
 
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                 </button>
