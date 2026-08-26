@@ -138,7 +138,6 @@ a:focus {
 .delete-btn {
   color: #fff;
   background-color: #dc3545;
-  border-color: #dc3545;
 }
 
 .delete-btn:hover {
@@ -150,7 +149,6 @@ a:focus {
 .edit-btn {
   color: #fff;
   background-color: #198754;
-  border-color: #198754;
 }
 
 .edit-btn:hover {
