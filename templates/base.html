@@ -14,6 +14,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The science of the kitchen </title>
 
+    <!-- Favicon -->
+     <link rel="apple-touch-icon" sizes="180x180" href="../static/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/images/favicon-16x16.png">
+
+    <!-- Google fonts preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -26,7 +37,7 @@
 
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top" data-bs-theme="dark">
         <div class="container">
             <a class="navbar-brand" href="{% url 'home' %}">The science of the kitchen</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -49,9 +60,12 @@
                             Categories
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{% url 'blog' %}?category=food-chemistry">Food Chemistry</a></li>
-                            <li><a class="dropdown-item" href="{% url 'blog' %}?category=food-safety">Food Safety</a></li>
-                            <li><a class="dropdown-item" href="{% url 'blog' %}?category=heat-and-energy">Heat and Energy</a></li>
+                            <li><a class="dropdown-item" href="{% url 'blog' %}?category=food-chemistry">Food
+                                    Chemistry</a></li>
+                            <li><a class="dropdown-item" href="{% url 'blog' %}?category=food-safety">Food Safety</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'blog' %}?category=heat-and-energy">Heat and
+                                    Energy</a></li>
                         </ul>
                     </li>
                     {% if user.is_authenticated %}
@@ -79,7 +93,7 @@
         </div>
     </nav>
     <!-- Django messages -->
-    <div class="container mt-3">
+    <div class="container">
         <div class="row">
             <div class="col-md-8 mx-auto">
                 {% for message in messages %}
@@ -99,7 +113,7 @@
     </main>
     <!-- Footer -->
     <footer class="txt-white">
-        <div>
+        <div class="pt-5">
             <a class="text-large" href="{% url 'about' %}">Contact Us</a>
             <span>
                 <p>or</p>

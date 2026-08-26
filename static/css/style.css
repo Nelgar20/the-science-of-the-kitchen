@@ -1,30 +1,40 @@
 :root {
   --cream: #fff4de;
+  --heading-font: "Playfair Display", serif;
+  --body-font: "Source Sans 3", sans-serif;
 }
 
 body {
   background-color: var();
-  padding-top: 70px;
+  font-family: var(--body-font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
 }
 
 footer {
   text-align: center;
-  margin-top: 8rem;
-  background-color:#000;
+  background-color: #000;
 }
 
 /* Navbar */
 .navbar .form-control:focus {
-    border-color: #ffffff;
-    box-shadow: 0 0 0 0.25rem rgb(255 255 255 / 25%);
-    outline: none;
+  border-color: #ffffff;
+  box-shadow: 0 0 0 0.25rem rgb(255 255 255 / 25%);
+  outline: none;
 }
 
 .navbar .dropdown-item:hover,
 .navbar .dropdown-item:focus,
 .navbar .dropdown-item:active {
-    color: #ffffff;
-    background-color: #343a40;
+  color: #ffffff;
+  background-color: #343a40;
 }
 
 /* Footer section */
@@ -34,7 +44,7 @@ footer a {
 
 footer a:hover,
 a:focus {
-    color: white;
+  color: white;
 }
 
 .text-large {
@@ -45,6 +55,18 @@ a:focus {
   color: rgb(255 255 255 / 80%);
 }
 
+/* Home */
+.hero {
+  min-height: 70vh;
+  background: url("../images/hero-03-mediterranean-table.webp") center no-repeat;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #dcdee2;
+}
+
 /* Blog */
 /* Header */
 .header-pad {
@@ -53,8 +75,8 @@ a:focus {
 
 /* Articles section */
 .article-container {
-    min-height: 450px;
-    padding-bottom: 5px;
+  min-height: 450px;
+  padding-bottom: 5px;
 }
 
 .image-container {
@@ -68,28 +90,28 @@ a:focus {
 }
 
 a {
-    text-decoration: none;
-    color: #4d5053;
+  text-decoration: none;
+  color: #4d5053;
 }
 
 a:hover,
 a:focus {
-    color: #000000;
+  color: #000000;
 }
 
 .page-link {
-    color: #9ea1a5;
+  color: #9ea1a5;
 }
 
 .page-link:hover {
-    color: white;
+  color: white;
 }
 
 .page-link:focus,
 .page-link:active {
-    color: #9ea1a5;
-    outline: none;
-    box-shadow: none;
+  color: #9ea1a5;
+  outline: none;
+  box-shadow: none;
 }
 
 /* About */
@@ -115,54 +137,53 @@ a:focus {
 /* Custom buttons */
 
 .delete-btn {
-    color: #fff;
-    background-color: #dc3545;
-    border-color: #dc3545;
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
 }
 
 .delete-btn:hover {
-    color: #dc3545;
-    background-color: #fff;
-    border-color: #dc3545;
+  color: #dc3545;
+  background-color: #fff;
+  border-color: #dc3545;
 }
 
 .edit-btn {
-    color: #fff;
-    background-color: #198754;
-    border-color: #198754;
+  color: #fff;
+  background-color: #198754;
+  border-color: #198754;
 }
 
 .edit-btn:hover {
-    color: #198754;
-    background-color: #fff;
-    border-color: #198754;
+  color: #198754;
+  background-color: #fff;
+  border-color: #198754;
 }
 
 .submit-btn {
-    color: #fff;
-    background-color: #000;
-
+  color: #fff;
+  background-color: #000;
 }
 
 .submit-btn:hover {
-    color: #000;
-    background-color: #fff;
-    border-color: #000;
+  color: #000;
+  background-color: #fff;
+  border-color: #000;
 }
 
 .src-btn {
-    color: #9ea1a5;
-    background-color: #2b3035;
-    border-color: #9ea1a5;
+  color: #9ea1a5;
+  background-color: #2b3035;
+  border-color: #9ea1a5;
 }
 
 .src-btn:hover {
-    color: #fff;
-    background-color: #2b3035;
-    border-color: #fff;
+  color: #fff;
+  background-color: #2b3035;
+  border-color: #fff;
 }
 
 /* Sign up */
 #signup_form ul {
-    list-style: none;
+  list-style: none;
 }
