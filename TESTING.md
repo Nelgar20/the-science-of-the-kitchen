@@ -1,6 +1,6 @@
 # Validation 
 
-## HTML validation
+## HTML validation using W3C HTML validator
 ### Home | home.html validation
 Errors founded
 ![image](static/images/Home-validation-error.png)
@@ -39,7 +39,7 @@ Errors fixed
 Pass
 ![image](static/images/logout-validation-pass.png)
 
-## CSS validation
+## CSS validation W3C CSS validator
 Passed with 4 warnings
 ![image](static/images/css-validation-pass-1.png)
 ![image](static/images/css-validation-warnings-4.png)
@@ -48,9 +48,27 @@ Eliminated the redundant css style, the other two warnings refer to the root cla
 ![image](static/images/css-validation-warnings-2.png)
 
 
-## JavaScript validation
+## JavaScript validation using JSHint
 ![image](static/images/jshint-validation.png)
 
-## Python validation
+## Python validation using PEP8CI link
+About | views.py
+![image](static/images/about-view-py.png)
+About | models.py 
+![image](static/images/about-models-py.png)
+Blog | views.py
+![image](static/images/blog-view-py.png)
+Blog | models.py
+![image](static/images/blog-models-py.png)
 ## Lighthouse validation
+Homepage
+![image](static/images/lighthouse-validation-home.png)
+Blog page
+![image](static/images/lighthouse-blog-validation.png)
+The low score on the blog page is due to unsecure resources loaded from cloudinary over HTTP instead HTTPS.
+![image](static/images/lighthouse-bad-score.png)
+Article detail page
+![image](static/images/article-detail-lighthouse-validation.png)
+About us page
+![image](static/images/lighthouse-validation-about-us.png)
 # Manual testing
