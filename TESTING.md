@@ -101,7 +101,7 @@ Homepage
 ![image](static/images/lighthouse-validation-home.png)
 Blog page
 ![image](static/images/lighthouse-blog-validation.png)
-The low score on the blog page is due to unsecure resources loaded from cloudinary over HTTP instead HTTPS.
+The low score on the blog page is due to unsecure resources loaded from cloudinary over HTTP instead HTTPS. As future improvement will be to review and update existing image URLs in the database.
 ![image](static/images/lighthouse-bad-score.png)
 Article detail page
 ![image](static/images/article-detail-lighthouse-validation.png)
