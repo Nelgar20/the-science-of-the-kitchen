@@ -16,6 +16,10 @@ def about_us(request):
                 request, messages.SUCCESS,
                 "The request to work with us received!"
                 "We'll be in touch within 2 working days.")
+        else:
+            messages.add_message(
+                request, messages.ERROR,
+                "Error: Please Try Again.")
 
     about = About.objects.all().order_by('-updated_on').first()
     work_with_us_form = WorkWithUsForm()
